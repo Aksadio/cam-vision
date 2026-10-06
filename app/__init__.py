@@ -1,0 +1,1 @@
+"""CAM VISION desktop application."""
