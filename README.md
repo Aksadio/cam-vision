@@ -16,21 +16,6 @@
 - Capture the processed preview to `captures/` as a timestamped JPEG.
 - Dark, responsive dashboard UI. Camera acquisition and model inference run on a worker thread so the UI remains responsive.
 
-Face Mesh's legacy MediaPipe API does not expose a per-face confidence score. The confidence readout therefore displays the available hand classification and pose-visibility scores, or `--` when those are unavailable.
-
-## Hand gestures and air drawing
-
-| Gesture | What happens |
-|---|---|
-| **One index finger pointing** (other fingers folded) | Draws a glowing line in the air that follows your fingertip. Write names, letters or any shape. |
-| **Lower or fold the finger** | Lifts the pen, so the next move starts a new line. |
-| **Two hands making a heart** (index fingertips touching at the top, thumb tips touching at the bottom, wrists apart) | Shows a big animated heart with "LOVE" for about 3 seconds. |
-| **Closed fist, held about 0.4 s, facing the camera** | Clears everything drawn (lines and heart). |
-
-The **CLEAR** button in the footer erases the drawing too, and the **Air Draw** switch turns the feature on or off. The sidebar GESTURE row shows what the app sees: `NO HAND` (no hand found), `HAND` (hand found, no gesture), `DRAWING`, `FIST`, `LOVE` or `CLEARED`.
-
-Tips: keep your hand about an arm's length (40 to 70 cm) from the camera with the whole hand inside the picture (a hand held right against the lens is often not detected), use good light, and keep the other three fingers folded when drawing. The slow face and pose models run only on every 4th frame (`face_every`, `pose_every` in `app/config.py`) so hands stay smooth. Avoid strong backlight (a bright window behind you) because washed-out video makes hands hard to detect; for more speed you can also switch off **Face Mesh** and **Pose Tracking**. If the heart or fist is hard to trigger, tune the values in the *Air drawing*, *Closed fist* and *Two-hand heart* sections of `app/config.py`.
-
 ## Screenshots
 
 _Add application screenshots here after running the project._
