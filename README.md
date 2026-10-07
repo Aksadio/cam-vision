@@ -102,9 +102,4 @@ cam-vision/
 - **Permission denied:** Allow desktop application camera access in Windows Privacy & security settings and restart the app.
 - **Screenshot not saved:** Ensure the project folder is writable. Captures are saved under `<project-root>/captures/`.
 
-## Future improvements
 
-- Camera selection and an explicit resolution selector.
-- Optional detector confidence/model settings and richer performance history.
-- More configurable overlay palettes and a recording/export workflow.
-- Packaging as a standalone Windows installer.
